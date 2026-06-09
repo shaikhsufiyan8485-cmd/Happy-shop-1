@@ -1,234 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Shop - School Season</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-body{
-background:#f5f7fa;
-}
-
-/* Welcome Page */
-#welcome{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#0f172a,#2563eb);
-color:white;
-text-align:center;
-padding:20px;
-}
-
-#welcome h1{
-font-size:60px;
-margin-bottom:15px;
-}
-
-#welcome p{
-font-size:20px;
-margin-bottom:30px;
-}
-
-.enter-btn{
-padding:15px 40px;
-font-size:20px;
-border:none;
-border-radius:50px;
-background:#facc15;
-color:#000;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
-}
-
-.enter-btn:hover{
-transform:scale(1.08);
-}
-
-/* Main Page */
-#main{
-display:none;
-}
-
-.hero{
-background:linear-gradient(135deg,#2563eb,#38bdf8);
-color:white;
-text-align:center;
-padding:60px 20px;
-}
-
-.hero h2{
-font-size:42px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:20px;
-max-width:700px;
-margin:auto;
-}
-
-.products{
+<!-- Colorful School Banner -->
+<section style="
+background:linear-gradient(135deg,#ff6b6b,#feca57,#48dbfb,#1dd1a1);
 padding:50px 20px;
-}
-
-.products h2{
 text-align:center;
-margin-bottom:30px;
-font-size:35px;
-color:#1e293b;
-}
+color:white;">
+    
+    <h1 style="font-size:45px;margin-bottom:15px;">
+        🎒 HAPPY SHOP 🎒
+    </h1>
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
+    <h2 style="font-size:28px;margin-bottom:15px;">
+        Back To School Season 2026
+    </h2>
 
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 4px 15px rgba(0,0,0,.1);
-transition:.3s;
-}
+    <p style="font-size:20px;max-width:800px;margin:auto;">
+        School Bags, Books, Notebooks, Pens, Pencils,
+        Geometry Boxes, Water Bottles aur sabhi School
+        Stationery Items ab Happy Shop par Available!
+    </p>
 
-.card:hover{
-transform:translateY(-8px);
-}
+    <div style="font-size:60px;margin-top:20px;">
+        🎒 📚 📓 ✏️ 🖊️ 📐 🧴
+    </div>
 
-.card h3{
-color:#2563eb;
-margin-bottom:10px;
-}
+</section>
 
-.offer{
-background:#facc15;
-padding:40px 20px;
-text-align:center;
-}
-
-.offer h2{
-font-size:35px;
-color:#000;
-margin-bottom:10px;
-}
-
-.offer p{
-font-size:18px;
-}
-
-.footer{
-background:#0f172a;
+<!-- Offer Strip -->
+<div style="
+background:#ff4757;
 color:white;
+padding:15px;
 text-align:center;
-padding:20px;
-}
-</style>
-</head>
-<body>
+font-size:22px;
+font-weight:bold;">
+🔥 School Season Offer - Jaldi Aaye Aur Shopping Kare! 🔥
+</div>
 
-<!-- Welcome Screen -->
-<section id="welcome">
-<h1>🎒 HAPPY SHOP</h1>
-<p>School Season Special Collection Available Now</p>
-<button class="enter-btn" onclick="enterShop()">ENTER SHOP</button>
+<!-- Product Highlights -->
+<section style="
+padding:40px 20px;
+background:#f1f2f6;">
+
+<h2 style="
+text-align:center;
+font-size:35px;
+margin-bottom:30px;
+color:#2f3542;">
+Available At Happy Shop
+</h2>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;">
+
+<div style="background:#ff6b6b;color:white;padding:25px;border-radius:15px;text-align:center;">
+🎒<br><br><b>School Bags</b>
+</div>
+
+<div style="background:#48dbfb;color:white;padding:25px;border-radius:15px;text-align:center;">
+📚<br><br><b>Books</b>
+</div>
+
+<div style="background:#1dd1a1;color:white;padding:25px;border-radius:15px;text-align:center;">
+📓<br><br><b>Notebooks</b>
+</div>
+
+<div style="background:#feca57;color:white;padding:25px;border-radius:15px;text-align:center;">
+✏️<br><br><b>Pencils</b>
+</div>
+
+<div style="background:#5f27cd;color:white;padding:25px;border-radius:15px;text-align:center;">
+🖊️<br><br><b>Pens</b>
+</div>
+
+<div style="background:#ee5253;color:white;padding:25px;border-radius:15px;text-align:center;">
+📐<br><br><b>Geometry Box</b>
+</div>
+
+<div style="background:#10ac84;color:white;padding:25px;border-radius:15px;text-align:center;">
+🧴<br><br><b>Water Bottles</b>
+</div>
+
+<div style="background:#ff9f43;color:white;padding:25px;border-radius:15px;text-align:center;">
+🎨<br><br><b>Stationery Items</b>
+</div>
+
+</div>
+
 </section>
-
-<!-- Main Content -->
-<div id="main">
-
-<section class="hero">
-<h2>Back To School Season 2026</h2>
-<p>
-School Bags, Books, Notebooks, Pens, Pencils, Geometry Boxes,
-Water Bottles aur sabhi School Stationery Items ab Happy Shop par.
-Jaldi aaye aur apni shopping complete karein.
-</p>
-</section>
-
-<section class="products">
-<h2>Available Products</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>🎒 School Bags</h3>
-<p>Stylish aur Strong School Bags</p>
-</div>
-
-<div class="card">
-<h3>📚 Books</h3>
-<p>School Books Available</p>
-</div>
-
-<div class="card">
-<h3>📓 Notebooks</h3>
-<p>All Types of Notebooks</p>
-</div>
-
-<div class="card">
-<h3>✏️ Pencils</h3>
-<p>Premium Quality Pencils</p>
-</div>
-
-<div class="card">
-<h3>🖊️ Pens</h3>
-<p>Blue, Black & Gel Pens</p>
-</div>
-
-<div class="card">
-<h3>📐 Geometry Box</h3>
-<p>Complete Geometry Sets</p>
-</div>
-
-<div class="card">
-<h3>🧴 Water Bottles</h3>
-<p>Kids & School Bottles</p>
-</div>
-
-<div class="card">
-<h3>🎨 Stationery Items</h3>
-<p>Erasers, Sharpeners, Colors & More</p>
-</div>
-
-</div>
-</section>
-
-<section class="offer">
-<h2>🔥 School Season Offer</h2>
-<p>
-School khulne se pehle apni zaroori stationery kharidein.
-Sab kuch ek hi jagah - Happy Shop.
-</p>
-</section>
-
-<footer class="footer">
-<h3>Happy Shop</h3>
-<p>School Bags • Books • Notebooks • Pens • Pencils • Water Bottles</p>
-<p>Visit Today!</p>
-</footer>
-
-</div>
-
-<script>
-function enterShop(){
-document.getElementById("welcome").style.display="none";
-document.getElementById("main").style.display="block";
-}
-</script>
-
-</body>
-</html>

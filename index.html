@@ -3,133 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Shop</title>
+<title>Happy Shop - School Season</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e3a8a,#06b6d4);
-height:100vh;
-overflow:hidden;
+background:#f5f7fb;
+overflow-x:hidden;
 }
 
-.page{
-width:100%;
+/* Welcome Page */
+#welcome{
 height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-color:white;
 text-align:center;
+background:linear-gradient(135deg,#0f172a,#2563eb,#06b6d4);
+color:white;
 padding:20px;
 }
 
 .logo{
-font-size:55px;
-font-weight:bold;
-letter-spacing:3px;
-text-shadow:0 0 20px rgba(255,255,255,.5);
+font-size:60px;
+font-weight:900;
+letter-spacing:4px;
+text-shadow:0 0 20px rgba(255,255,255,.4);
 }
 
 .tagline{
+font-size:22px;
 margin-top:15px;
-font-size:18px;
-opacity:.9;
 }
 
-.btn{
+.enter-btn{
 margin-top:35px;
-padding:15px 35px;
-border:none;
-border-radius:50px;
-background:#fff;
-color:#1e3a8a;
+padding:15px 40px;
 font-size:18px;
 font-weight:bold;
+border:none;
+border-radius:50px;
+background:#facc15;
+color:#111;
 cursor:pointer;
-transition:.3s;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
 }
 
-.btn:hover{
+.enter-btn:hover{
 transform:scale(1.05);
 }
 
-#details{
+/* Shop Page */
+#shop{
 display:none;
-background:#f8fafc;
-color:#111827;
+padding:20px;
+}
+
+.banner{
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+color:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.banner h1{
+font-size:35px;
+margin-bottom:10px;
+}
+
+.banner p{
+font-size:18px;
+line-height:1.6;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-top:20px;
 }
 
 .card{
 background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 40px rgba(0,0,0,.15);
-max-width:450px;
-width:100%;
+padding:20px;
+border-radius:15px;
+text-align:center;
+font-size:18px;
+font-weight:600;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
 }
 
-.shop{
-font-size:36px;
+.card:hover{
+transform:translateY(-5px);
+}
+
+.info{
+background:white;
+padding:30px;
+border-radius:20px;
+margin-top:25px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.shop-name{
+font-size:35px;
 font-weight:bold;
-color:#1e3a8a;
-margin-bottom:20px;
+color:#2563eb;
+margin-bottom:15px;
 }
 
 .owner{
 font-size:24px;
 font-weight:bold;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .phone{
 font-size:20px;
-color:#2563eb;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .address{
 font-size:18px;
 line-height:1.8;
-color:#444;
+margin-bottom:20px;
 }
 
-.back{
-margin-top:25px;
-padding:12px 25px;
-border:none;
+.buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.btn{
+padding:14px 25px;
 border-radius:10px;
-background:#2563eb;
+text-decoration:none;
 color:white;
-cursor:pointer;
+font-weight:bold;
+}
+
+.call{
+background:#2563eb;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.footer{
+text-align:center;
+margin-top:25px;
+color:#666;
+font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="page" id="home">
+<!-- Welcome Screen -->
+<section id="welcome">
 <h1 class="logo">HAPPY SHOP</h1>
-<p class="tagline">
-Welcome To Happy Shop
-</p>
+<p class="tagline">🎒 School Season Special 2026 🎒</p>
 
-<button class="btn" onclick="openDetails()">
-Enter Happy Shop
+<button class="enter-btn" onclick="openShop()">
+ENTER SHOP
 </button>
+</section>
+
+<!-- Main Shop Page -->
+<section id="shop">
+
+<div class="banner">
+<h1>📚 Back To School Special 📚</h1>
+<p>
+School Bags, Books, Notebooks, Pens, Pencils, Geometry Boxes,
+Water Bottles aur Complete School Stationery ab Happy Shop par
+uplabdh hai. Jaldi aaiye aur apni school shopping poori kijiye.
+</p>
 </div>
 
-<div class="page" id="details">
-<div class="card">
+<div class="products">
+<div class="card">🎒 School Bags</div>
+<div class="card">📚 Books</div>
+<div class="card">📒 Notebooks</div>
+<div class="card">✏️ Pencils</div>
+<div class="card">🖊️ Pens</div>
+<div class="card">📐 Geometry Boxes</div>
+<div class="card">🧴 Water Bottles</div>
+<div class="card">🎨 Stationery Items</div>
+</div>
 
-<div class="shop">Happy Shop</div>
+<div class="info">
+
+<div class="shop-name">🏪 HAPPY SHOP</div>
 
 <div class="owner">
 Parvez Anees Syed
@@ -142,25 +222,33 @@ Parvez Anees Syed
 <div class="address">
 📍 Zee Corner,<br>
 Peth Mohalla,<br>
-Parli, Maharashtra
+Parli
 </div>
 
-<button class="back" onclick="goBack()">
-Back
-</button>
+<div class="buttons">
+
+<a href="tel:8888919139" class="btn call">
+📞 Call Now
+</a>
+
+<a href="https://wa.me/918888919139" class="btn whatsapp">
+💬 WhatsApp
+</a>
 
 </div>
+
 </div>
+
+<div class="footer">
+© 2026 Happy Shop | School Season Collection Available
+</div>
+
+</section>
 
 <script>
-function openDetails(){
-document.getElementById("home").style.display="none";
-document.getElementById("details").style.display="flex";
-}
-
-function goBack(){
-document.getElementById("details").style.display="none";
-document.getElementById("home").style.display="flex";
+function openShop(){
+document.getElementById("welcome").style.display="none";
+document.getElementById("shop").style.display="block";
 }
 </script>
 

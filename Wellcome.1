@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Shop</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#06b6d4);
+height:100vh;
+overflow:hidden;
+}
+
+.page{
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.logo{
+font-size:55px;
+font-weight:bold;
+letter-spacing:3px;
+text-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+.tagline{
+margin-top:15px;
+font-size:18px;
+opacity:.9;
+}
+
+.btn{
+margin-top:35px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#fff;
+color:#1e3a8a;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+#details{
+display:none;
+background:#f8fafc;
+color:#111827;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 40px rgba(0,0,0,.15);
+max-width:450px;
+width:100%;
+}
+
+.shop{
+font-size:36px;
+font-weight:bold;
+color:#1e3a8a;
+margin-bottom:20px;
+}
+
+.owner{
+font-size:24px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.phone{
+font-size:20px;
+color:#2563eb;
+margin-bottom:15px;
+}
+
+.address{
+font-size:18px;
+line-height:1.8;
+color:#444;
+}
+
+.back{
+margin-top:25px;
+padding:12px 25px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page" id="home">
+<h1 class="logo">HAPPY SHOP</h1>
+<p class="tagline">
+Welcome To Happy Shop
+</p>
+
+<button class="btn" onclick="openDetails()">
+Enter Happy Shop
+</button>
+</div>
+
+<div class="page" id="details">
+<div class="card">
+
+<div class="shop">Happy Shop</div>
+
+<div class="owner">
+Parvez Anees Syed
+</div>
+
+<div class="phone">
+📞 +91 8888919139
+</div>
+
+<div class="address">
+📍 Zee Corner,<br>
+Peth Mohalla,<br>
+Parli, Maharashtra
+</div>
+
+<button class="back" onclick="goBack()">
+Back
+</button>
+
+</div>
+</div>
+
+<script>
+function openDetails(){
+document.getElementById("home").style.display="none";
+document.getElementById("details").style.display="flex";
+}
+
+function goBack(){
+document.getElementById("details").style.display="none";
+document.getElementById("home").style.display="flex";
+}
+</script>
+
+</body>
+</html>

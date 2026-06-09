@@ -10,12 +10,11 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
-background:#f5f7fb;
-overflow-x:hidden;
+background:#f5f7fa;
 }
 
 /* Welcome Page */
@@ -25,230 +24,209 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#0f172a,#2563eb,#06b6d4);
+background:linear-gradient(135deg,#0f172a,#2563eb);
 color:white;
+text-align:center;
 padding:20px;
 }
 
-.logo{
+#welcome h1{
 font-size:60px;
-font-weight:900;
-letter-spacing:4px;
-text-shadow:0 0 20px rgba(255,255,255,.4);
+margin-bottom:15px;
 }
 
-.tagline{
-font-size:22px;
-margin-top:15px;
+#welcome p{
+font-size:20px;
+margin-bottom:30px;
 }
 
 .enter-btn{
-margin-top:35px;
 padding:15px 40px;
-font-size:18px;
-font-weight:bold;
+font-size:20px;
 border:none;
 border-radius:50px;
 background:#facc15;
-color:#111;
+color:#000;
+font-weight:bold;
 cursor:pointer;
-box-shadow:0 8px 20px rgba(0,0,0,.3);
+transition:.3s;
 }
 
 .enter-btn:hover{
-transform:scale(1.05);
+transform:scale(1.08);
 }
 
-/* Shop Page */
-#shop{
+/* Main Page */
+#main{
 display:none;
-padding:20px;
 }
 
-.banner{
-background:linear-gradient(135deg,#2563eb,#06b6d4);
+.hero{
+background:linear-gradient(135deg,#2563eb,#38bdf8);
 color:white;
-padding:30px;
-border-radius:20px;
 text-align:center;
-margin-bottom:20px;
+padding:60px 20px;
 }
 
-.banner h1{
-font-size:35px;
-margin-bottom:10px;
+.hero h2{
+font-size:42px;
+margin-bottom:15px;
 }
 
-.banner p{
-font-size:18px;
-line-height:1.6;
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
 }
 
 .products{
+padding:50px 20px;
+}
+
+.products h2{
+text-align:center;
+margin-bottom:30px;
+font-size:35px;
+color:#1e293b;
+}
+
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-margin-top:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
 .card{
 background:white;
-padding:20px;
+padding:25px;
 border-radius:15px;
 text-align:center;
-font-size:18px;
-font-weight:600;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+box-shadow:0 4px 15px rgba(0,0,0,.1);
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
-.info{
-background:white;
-padding:30px;
-border-radius:20px;
-margin-top:25px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.shop-name{
-font-size:35px;
-font-weight:bold;
+.card h3{
 color:#2563eb;
-margin-bottom:15px;
-}
-
-.owner{
-font-size:24px;
-font-weight:bold;
 margin-bottom:10px;
 }
 
-.phone{
-font-size:20px;
+.offer{
+background:#facc15;
+padding:40px 20px;
+text-align:center;
+}
+
+.offer h2{
+font-size:35px;
+color:#000;
 margin-bottom:10px;
 }
 
-.address{
+.offer p{
 font-size:18px;
-line-height:1.8;
-margin-bottom:20px;
-}
-
-.buttons{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.btn{
-padding:14px 25px;
-border-radius:10px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-}
-
-.call{
-background:#2563eb;
-}
-
-.whatsapp{
-background:#25D366;
 }
 
 .footer{
+background:#0f172a;
+color:white;
 text-align:center;
-margin-top:25px;
-color:#666;
-font-size:14px;
+padding:20px;
 }
 </style>
 </head>
-
 <body>
 
 <!-- Welcome Screen -->
 <section id="welcome">
-<h1 class="logo">HAPPY SHOP</h1>
-<p class="tagline">🎒 School Season Special 2026 🎒</p>
-
-<button class="enter-btn" onclick="openShop()">
-ENTER SHOP
-</button>
+<h1>🎒 HAPPY SHOP</h1>
+<p>School Season Special Collection Available Now</p>
+<button class="enter-btn" onclick="enterShop()">ENTER SHOP</button>
 </section>
 
-<!-- Main Shop Page -->
-<section id="shop">
+<!-- Main Content -->
+<div id="main">
 
-<div class="banner">
-<h1>📚 Back To School Special 📚</h1>
+<section class="hero">
+<h2>Back To School Season 2026</h2>
 <p>
 School Bags, Books, Notebooks, Pens, Pencils, Geometry Boxes,
-Water Bottles aur Complete School Stationery ab Happy Shop par
-uplabdh hai. Jaldi aaiye aur apni school shopping poori kijiye.
+Water Bottles aur sabhi School Stationery Items ab Happy Shop par.
+Jaldi aaye aur apni shopping complete karein.
 </p>
-</div>
-
-<div class="products">
-<div class="card">🎒 School Bags</div>
-<div class="card">📚 Books</div>
-<div class="card">📒 Notebooks</div>
-<div class="card">✏️ Pencils</div>
-<div class="card">🖊️ Pens</div>
-<div class="card">📐 Geometry Boxes</div>
-<div class="card">🧴 Water Bottles</div>
-<div class="card">🎨 Stationery Items</div>
-</div>
-
-<div class="info">
-
-<div class="shop-name">🏪 HAPPY SHOP</div>
-
-<div class="owner">
-Parvez Anees Syed
-</div>
-
-<div class="phone">
-📞 +91 8888919139
-</div>
-
-<div class="address">
-📍 Zee Corner,<br>
-Peth Mohalla,<br>
-Parli
-</div>
-
-<div class="buttons">
-
-<a href="tel:8888919139" class="btn call">
-📞 Call Now
-</a>
-
-<a href="https://wa.me/918888919139" class="btn whatsapp">
-💬 WhatsApp
-</a>
-
-</div>
-
-</div>
-
-<div class="footer">
-© 2026 Happy Shop | School Season Collection Available
-</div>
-
 </section>
 
+<section class="products">
+<h2>Available Products</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🎒 School Bags</h3>
+<p>Stylish aur Strong School Bags</p>
+</div>
+
+<div class="card">
+<h3>📚 Books</h3>
+<p>School Books Available</p>
+</div>
+
+<div class="card">
+<h3>📓 Notebooks</h3>
+<p>All Types of Notebooks</p>
+</div>
+
+<div class="card">
+<h3>✏️ Pencils</h3>
+<p>Premium Quality Pencils</p>
+</div>
+
+<div class="card">
+<h3>🖊️ Pens</h3>
+<p>Blue, Black & Gel Pens</p>
+</div>
+
+<div class="card">
+<h3>📐 Geometry Box</h3>
+<p>Complete Geometry Sets</p>
+</div>
+
+<div class="card">
+<h3>🧴 Water Bottles</h3>
+<p>Kids & School Bottles</p>
+</div>
+
+<div class="card">
+<h3>🎨 Stationery Items</h3>
+<p>Erasers, Sharpeners, Colors & More</p>
+</div>
+
+</div>
+</section>
+
+<section class="offer">
+<h2>🔥 School Season Offer</h2>
+<p>
+School khulne se pehle apni zaroori stationery kharidein.
+Sab kuch ek hi jagah - Happy Shop.
+</p>
+</section>
+
+<footer class="footer">
+<h3>Happy Shop</h3>
+<p>School Bags • Books • Notebooks • Pens • Pencils • Water Bottles</p>
+<p>Visit Today!</p>
+</footer>
+
+</div>
+
 <script>
-function openShop(){
+function enterShop(){
 document.getElementById("welcome").style.display="none";
-document.getElementById("shop").style.display="block";
+document.getElementById("main").style.display="block";
 }
 </script>
 
